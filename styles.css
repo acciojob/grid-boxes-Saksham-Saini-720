@@ -3,10 +3,9 @@ body {
   font-family: Arial, sans-serif;
 }
 
-.grid {
+#grid {
   display: grid;
   grid-template-columns: 1.2fr 1fr 1fr 1fr;
-  grid-template-rows: auto;
   gap: 8px;
 
   grid-template-areas:
@@ -17,6 +16,7 @@ body {
     "two ten ten ten";
 }
 
+
 .box {
   background-color: green;
   color: white;
@@ -24,14 +24,14 @@ body {
   padding: 20px;
 }
 
-/* grid areas */
-.box1  { grid-area: one; }
-.box2  { grid-area: two; }
-.box3  { grid-area: three; }
-.box4  { grid-area: four; }
-.box5  { grid-area: five; }
-.box6  { grid-area: six; }
-.box7  { grid-area: seven; }
-.box8  { grid-area: eight; }
-.box9  { grid-area: nine; }
-.box10 { grid-area: ten; }
+#grid > div:nth-child(1)  { grid-area: one; }
+#grid > div:nth-child(2)  { grid-area: two; }
+#grid > div:nth-child(3)  { grid-area: three; }
+#grid > div:nth-child(4)  { grid-area: four; }
+#grid > div:nth-child(5)  { grid-area: five; }
+#grid > div:nth-child(6)  { grid-area: six; }
+#grid > div:nth-child(7)  { grid-area: seven; }
+#grid > div:nth-child(8)  { grid-area: eight; }
+#grid > div:nth-child(9)  { grid-area: nine; }
+#grid > div:nth-child(10) { grid-area: ten; }
+
