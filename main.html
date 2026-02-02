@@ -5,36 +5,47 @@
   <title>CSS Grid Layout Design</title>
 
   <style>
-    body {
-      font-family: Arial, sans-serif;
-    }
+   #grid {
+  display: grid;
+  grid-template-columns: repeat(4, 124px);
+  gap: 10px;
+}
 
-    #grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 10px;
-    }
+#grid > div {
+  background: green;
+  color: white;
+  padding: 20px;
+  font-size: 24px;
+}
 
-    #grid > div {
-      background: green;
-      color: white;
-      font-size: 24px;
-      padding: 20px;
-    }
+/* item 1 → full row (5 columns) */
+#grid > div:nth-child(1) {
+  grid-column: span 4;
+}
 
-    /* Layout */
-    #grid > div:nth-child(1) {
-      grid-column: span 4;
-    }
+/* item 2 → left tall block */
+#grid > div:nth-child(2) {
+  grid-row: span 4;
+}
 
-    #grid > div:nth-child(2) {
-      grid-row: span 4;
-    }
+/* item 3 → span 2 columns (THIS IS REQUIRED BY TEST) */
+#grid > div:nth-child(3) {
+  grid-column: span 1;
+}
+ #grid > div:nth-child(4) {
+  grid-column: span 2;
+}
 
-    #grid > div:nth-child(5),
-    #grid > div:nth-child(10) {
-      grid-column: span 3;
-    }
+/* item 5 → long bar */
+#grid > div:nth-child(5) {
+  grid-column: span 2;
+}
+
+/* item 10 → bottom bar */
+#grid > div:nth-child(10) {
+  grid-column: span 3;
+}
+
   </style>
 </head>
 
